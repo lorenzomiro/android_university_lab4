@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 
+import com.codepath.recyclerviewlab.models.Article;
 import com.codepath.recyclerviewlab.networking.NYTimesApiClient;
 
 
@@ -62,6 +63,8 @@ public class ArticleResultFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_article_result_list, container, false);
 
+
+
         return view;
     }
 
@@ -80,6 +83,7 @@ public class ArticleResultFragment extends Fragment {
         Log.d("ArticleResultFragment", "loading articles for query " + query);
         Toast.makeText(getContext(), "Loading articles for \'" + query + "\'", Toast.LENGTH_SHORT).show();
         // TODO(Checkpoint 3): Implement this method to populate articles
+
     }
 
     private void loadArticlesByPage(final int page) {
